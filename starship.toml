@@ -1,0 +1,36 @@
+# Show the username
+[username]
+show_always = true
+format = "👾 [$user](bold blue) "
+
+# Show the directory with a folder emoji 📁
+[directory]
+truncation_length = 3
+format = "👾 [$path](bold purple) "
+home_symbol = "🏠 "
+
+# Show PHP version 🐘
+[php]
+format = "🐘 [$version](bold magenta) "
+
+# Show Node.js version 🌳
+[nodejs]
+format = "🌳 [$version](bold green) "
+
+# Show Python version 🐍
+[python]
+format = "🐍 [$version](bold blue) "
+
+[vagrant]
+disabled = true
+
+[git_status]
+disabled = true
+
+[aws]
+disabled = true
+
+# Show a rocket ⚡ as the prompt symbol
+[character]
+success_symbol = "[⚡️](bold yellow) "
+error_symbol = "[❌](bold red) "
