@@ -8,6 +8,10 @@
 1. Avoid unnecessary object copying or cloning
 2. Avoid deep nesting; return early instead
 3. Use appropriate concurrency control mechanisms
+## Core Development Rules
+**RULE 1:** Keep going until the job is completely solved before ending your turn. Do not stop mid-task or leave incomplete work.
+**RULE 2:** If you are unsure about tools or files, open them and examine their contents. Do not hallucinate or make assumptions about file structures, tool capabilities, or code behavior.
+**RULE 3:** Plan thoroughly before every tool call, and reflect on the outcome after. Always verify that your actions achieved the intended result.
 ## Code Smell Identification & Treatment
 Based on Martin Fowler's core insights in "Refactoring," here are code smells to watch for and how to handle them:
 ### 1. Mysterious Names
