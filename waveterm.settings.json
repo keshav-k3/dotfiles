@@ -1,0 +1,10 @@
+{
+  "autoupdate:channel": "latest",
+  "telemetry:enabled": false,
+  "app:globalhotkey": "Cmd:t",
+  "term:transparency": 0.8,
+  "web:defaulturl": "https://docs.aws.amazon.com/",
+  "web:defaultsearch": "https://www.perplexity.ai/?q={query}",
+  "window:opacity": 0.8,
+  "window:transparent": true
+}
