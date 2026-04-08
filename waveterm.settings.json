@@ -1,10 +1,129 @@
 {
-  "autoupdate:channel": "latest",
-  "telemetry:enabled": false,
-  "app:globalhotkey": "Cmd:t",
-  "term:transparency": 0.8,
-  "web:defaulturl": "https://docs.aws.amazon.com/",
-  "web:defaultsearch": "https://www.perplexity.ai/?q={query}",
-  "window:opacity": 0.8,
-  "window:transparent": true
+  "defwidget@terminal": {
+    "display:order": 1,
+    "icon": "solid@terminal",
+    "label": "term",
+    "color": "#39FF14",
+    "description": "Terminal",
+    "blockdef": {
+      "meta": {
+        "view": "term",
+        "controller": "shell"
+      }
+    }
+  },
+  "defwidget@files": {
+    "display:order": 2,
+    "icon": "solid@folder",
+    "label": "files",
+    "color": "#FFD166",
+    "description": "File Browser",
+    "blockdef": {
+      "meta": {
+        "view": "preview"
+      }
+    }
+  },
+  "defwidget@web": {
+    "display:order": 3,
+    "icon": "solid@globe",
+    "label": "web",
+    "color": "#00C2FF",
+    "description": "Web Browser",
+    "blockdef": {
+      "meta": {
+        "view": "web"
+      }
+    }
+  },
+  "defwidget@sysinfo": {
+    "display:order": 4,
+    "icon": "solid@chart-line",
+    "label": "sys",
+    "color": "#FF4D6D",
+    "description": "System Info",
+    "blockdef": {
+      "meta": {
+        "view": "sysinfo"
+      }
+    }
+  },
+  "gemini": {
+    "display:order": 5,
+    "icon": "brands@google",
+    "color": "#00E5FF",
+    "label": "Gemini",
+    "blockdef": {
+      "meta": {
+        "view": "web",
+        "url": "https://gemini.google.com/gem/d532f24a1cfa",
+        "pinnedurl": "https://gemini.google.com/gem/d532f24a1cfa"
+      }
+    }
+  },
+  "google-task": {
+    "display:order": 6,
+    "icon": "list-check",
+    "color": "#1A73E8",
+    "label": "Task",
+    "blockdef": {
+      "meta": {
+        "view": "web",
+        "url": "https://tasks.google.com/tasks/",
+        "pinnedurl": "https://tasks.google.com/tasks/"
+      }
+    }
+  },
+  "status-aws": {
+    "display:order": 7,
+    "icon": "brands@aws",
+    "color": "#FF9900",
+    "label": "AWS",
+    "blockdef": {
+      "meta": {
+        "view": "web",
+        "url": "https://health.aws.amazon.com/health/status",
+        "pinnedurl": "https://health.aws.amazon.com/health/status"
+      }
+    }
+  },
+  "status-cloudflare": {
+    "display:order": 8,
+    "icon": "brands@cloudflare",
+    "color": "#F38020",
+    "label": "Cloudflare",
+    "blockdef": {
+      "meta": {
+        "view": "web",
+        "url": "https://www.cloudflarestatus.com/",
+        "pinnedurl": "https://www.cloudflarestatus.com/"
+      }
+    }
+  },
+  "status-github": {
+    "display:order": 9,
+    "icon": "brands@github",
+    "color": "#58A6FF",
+    "label": "Github",
+    "blockdef": {
+      "meta": {
+        "view": "web",
+        "url": "https://www.githubstatus.com/",
+        "pinnedurl": "https://www.githubstatus.com/"
+      }
+    }
+  },
+  "status-cursor": {
+    "display:order": 10,
+    "icon": "arrow-pointer",
+    "color": "#A259FF",
+    "label": "Cursor",
+    "blockdef": {
+      "meta": {
+        "view": "web",
+        "url": "https://status.cursor.com/",
+        "pinnedurl": "https://status.cursor.com/"
+      }
+    }
+  }
 }
