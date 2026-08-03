@@ -1,36 +1,123 @@
-# Show the username
-[username]
-show_always = true
-format = "👾 [$user](bold blue) "
+"$schema" = 'https://starship.rs/config-schema.json'
 
-# Show the directory with a folder emoji 📁
-[directory]
-truncation_length = 3
-format = "👾 [$path](bold purple) "
-home_symbol = "🏠 "
+add_newline = true
+palette = 'starship'
+scan_timeout = 10
 
-# Show PHP version 🐘
-[php]
-format = "🐘 [$version](bold magenta) "
+format = """
+[╭╴](fg:gray)\
+$os\
+$directory\
+$git_branch\
+$git_status\
+$cmd_duration\
+$status
+[╰╴❯](fg:gray)[ ]()"""
 
-# Show Node.js version 🌳
-[nodejs]
-format = "🌳 [$version](bold green) "
-
-# Show Python version 🐍
-[python]
-format = "🐍 [$version](bold blue) "
-
-[vagrant]
+[line_break]
 disabled = true
+
+[os]
+disabled = false
+style = 'bg:primary_700 fg:white'
+format = '[](fg:primary_700)[  ]($style)[ ](fg:primary_700)'
+
+[directory]
+truncation_length = 1
+style = 'bold bg:primary_950 fg:white'
+format = '[](fg:primary_950)[ $path ]($style)[ ](fg:primary_950)'
+truncation_symbol = '…/'
+repo_root_style = 'bold bg:primary_950 fg:white'
+repo_root_format = '[](fg:primary_950)[  $repo_root ]($style)[ ](fg:primary_950)'
+
+[directory.substitutions]
+"~/Documents" = "󰈙 "
+"~/Downloads" = " "
+"~/Music" = " "
+"~/Pictures" = " "
+"~/Videos" = " "
+"~/project" = "󱌢 "
+"~/GitHub" = " "
+"~/.config" = " "
+
+[git_branch]
+symbol = ""
+style = "bold fg:success_400 bg:primary_700"
+format = '[](fg:primary_700)[ $symbol $branch(:$remote_branch) ]($style)[ ](fg:primary_700)'
 
 [git_status]
-disabled = true
+style = 'bold fg:white bg:primary_950'
+format = '[](fg:primary_950)[ $all_status$ahead_behind]($style)[ ](fg:primary_950)'
+conflicted = 'conflict ${count} '
+ahead = 'ahead ${count} '
+behind = 'behind ${count} '
+diverged = 'diverged '
+untracked = 'new ${count} '
+stashed = 'stashed ${count} '
+modified = 'edited ${count} '
+staged = 'staged ${count} '
+renamed = 'renamed ${count} '
+deleted = 'deleted ${count} '
 
-[aws]
-disabled = true
+[bun]
+symbol = ''
+style = "bold fg:white bg:primary_950"
+version_format = "v${major}.${minor}"
+format = '[ $symbol $version]($style)'
 
-# Show a rocket ⚡ as the prompt symbol
-[character]
-success_symbol = "[⚡️](bold yellow) "
-error_symbol = "[❌](bold red) "
+[dart]
+symbol = ''
+style = "bold fg:primary_300 bg:primary_950"
+version_format = "v${major}.${minor}"
+format = '[ $symbol $version]($style)'
+
+[golang]
+symbol = ""
+style = "bold fg:primary_300 bg:primary_950"
+version_format = "v${major}.${minor}"
+format = '[ $symbol $version]($style)'
+
+[lua]
+symbol = ""
+style = "bold fg:#c084fc bg:primary_950"
+version_format = "v${major}.${minor}"
+format = '[ $symbol $version]($style)'
+
+[rust]
+symbol = ""
+style = "bold fg:#fb923c bg:primary_950"
+version_format = "v${major}.${minor}"
+format = '[ $symbol $version]($style)'
+
+[terraform]
+symbol = ""
+style = "bold fg:#c084fc bg:primary_950"
+version_format = "v${major}.${minor}"
+format = '[ $symbol $version]($style)'
+
+[status]
+disabled = false
+style = 'bold fg:danger_500'
+success_symbol = ''
+symbol = '✗ '
+format = '[$symbol$status]($style) '
+
+[cmd_duration]
+min_time = 2_000
+show_milliseconds = false
+format = '[$duration](fg:gray) '
+
+[palettes.starship]
+primary_950 = '#192152'
+primary_800 = '#2337aa'
+primary_700 = '#2442d1'
+primary_600 = '#3059e4'
+primary_500 = '#4275ef'
+primary_300 = '#97bdf9'
+
+success_400 = '#4ADE80'
+
+danger_500 = '#EF4444'
+
+white = '#F9FAFB'
+gray = '#9CA3AF'
